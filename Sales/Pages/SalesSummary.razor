@@ -2,9 +2,16 @@
 @using Sales.Data
 @inject ProductsService ProductService
 
-<h3>Sales Summary</h3>
+<PageTitle>Sales Summary</PageTitle>
 
-@if (products == null)
+@if (errorMessage != null)
+{
+    <div class="alert alert-danger">
+        <h4 class="alert-heading">Error</h4>
+        <p>@errorMessage</p>
+    </div>
+}
+else if (products == null)
 {
     <p>Loading...</p>
 }
@@ -24,17 +31,17 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var sale in products)
+            @foreach (var product in products)
             {
                 <tr>
-                    <td>@sale.Segment</td>
-                    <td>@sale.Country</td>
-                    <td>@sale.Product</td>
-                    <td>@sale.DiscountBand</td>
-                    <td>@sale.UnitsSold</td>
-                    <td>@sale.ManufacturingPrice</td>
-                    <td>@sale.SalePrice</td>
-                    <td>@sale.Date.ToShortDateString()</td>
+                    <td>@product.Segment</td>
+                    <td>@product.Country</td>
+                    <td>@product.Product</td>
+                    <td>@product.DiscountBand</td>
+                    <td>@product.UnitsSold</td>
+                    <td>@product.ManufacturingPrice</td>
+                    <td>@product.SalePrice</td>
+                    <td>@product.Date.ToShortDateString()</td>
                 </tr>
             }
         </tbody>
@@ -43,9 +50,17 @@ else
 
 @code {
     private List<Products> products;
+    private string errorMessage;
 
     protected override void OnInitialized()
     {
-        products = ProductService.GetProducts();
+        try
+        {
+            products = ProductService.GetProducts();
+        }
+        catch (Exception ex)
+        {
+            errorMessage = ex.Message;
+        }
     }
 }

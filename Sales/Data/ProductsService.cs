@@ -9,13 +9,21 @@ public class ProductsService
 {
     public List<Products> GetProducts()
     {
-        using (var reader = new StreamReader("Data.csv"))
-        using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+        try
         {
-            csv.Context.RegisterClassMap<ProductsMap>(); // Optional: If you have a custom mapping
+            using (var reader = new StreamReader("Data.csv"))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                csv.Context.RegisterClassMap<ProductsMap>(); // Optional: If you have a custom mapping
 
-            var products = csv.GetRecords<Products>().ToList();
-            return products;
+                var products = csv.GetRecords<Products>().ToList();
+                return products;
+            }
+        }
+        catch (Exception ex)
+        {
+            // Log the exception or handle it as necessary
+            throw new Exception("Error loading products from CSV please see log file", ex);
         }
     }
 }
