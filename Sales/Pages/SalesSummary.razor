@@ -1,7 +1,7 @@
 ﻿@page "/sales-summary"
 @using Sales.Data
 @inject ProductsService ProductService
-@inject ILogger<SalesSummary> Logger
+@using Serilog;
 
 <PageTitle>Sales Summary</PageTitle>
 
@@ -58,11 +58,12 @@ else
         try
         {
             products = ProductService.GetProducts();
+            Log.Information("Sales summary read from CSV successfully.");
         }
         catch (Exception ex)
         {
-            Logger.LogError(ex, errorMessage);
-            errorMessage = ex.Message;
+            Log.Error(ex, "Error displaying Sales Summary");
+            errorMessage = $"Error loading products from CSV please see log file";
         }
     }
 }

@@ -1,7 +1,6 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.Extensions.Logging;
-using Sales.Data;
+﻿using Sales.Data;
+using Serilog;
+using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,10 +9,11 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<ProductsService>();
 
-// Configure logging
-builder.Logging.AddConfiguration(builder.Configuration.GetSection("Logging"));
-builder.Logging.AddConsole();
-builder.Logging.AddDebug();
+Log.Logger = new LoggerConfiguration()
+.Enrich.FromLogContext()
+.WriteTo.File("log.txt")
+.CreateLogger();
+
 
 var app = builder.Build();
 
@@ -32,4 +32,6 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
+
+
 

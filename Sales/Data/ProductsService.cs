@@ -30,8 +30,8 @@ public class ProductsService
         catch (Exception ex)
         {
             // Log the exception and handle it as necessary
-            _logger.LogError(ex, "Error loading products from CSV");
-            throw new Exception("Error loading products from CSV please see log file", ex);
+            _logger.LogError(ex, "Error reading from CSV");
+            throw new Exception(ex.Message, ex);
         }
     }
 }
