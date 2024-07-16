@@ -1,6 +1,5 @@
 ﻿using Sales.Data;
 using Serilog;
-using Serilog.Events;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,6 +31,4 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 app.Run();
-
-
 

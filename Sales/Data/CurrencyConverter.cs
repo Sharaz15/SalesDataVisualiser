@@ -1,9 +1,7 @@
 ﻿using CsvHelper;
 using CsvHelper.Configuration;
 using CsvHelper.TypeConversion;
-using System;
 using System.Globalization;
-using System.Text.RegularExpressions;
 
 namespace Sales.Data;
 
