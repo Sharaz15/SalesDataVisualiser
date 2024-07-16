@@ -34,7 +34,7 @@ Serilog is used for logging events and errors to a file. The following configura
 
 ### Success
 
-![Success Screenshot](screenshots/success.png)![Uploading Screenshot 2024-07-16 at 22.16.20.png…]()
+![Success Screenshot](screenshots/success.png)
 
 
 ### Error
