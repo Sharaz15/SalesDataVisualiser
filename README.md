@@ -2,6 +2,16 @@
 
 This Blazor Server application reads sales data from a CSV file, processes it using CsvHelper, and logs events using Serilog. Below are the steps to run the application and details on the implementation.
 
+# Screenshots
+
+### Success
+
+![Success Screenshot](screenshots/success.png)
+
+
+### Error
+
+![Error Screenshot](screenshots/error.png)
 
 # Using CsvHelper
 
@@ -29,14 +39,3 @@ Serilog is used for logging events and errors to a file. The following configura
 
 - **Dependency Injection:** Serilog is integrated into the Blazor application using dependency injection. This allows it to be used throughout the application for consistent logging practices.
 - **Error Handling:** In Blazor components, Serilog is used to log exceptions and errors, ensuring that any issues during data fetching or processing are recorded for later review.
-
-# Screenshots
-
-### Success
-
-![Success Screenshot](screenshots/success.png)
-
-
-### Error
-
-![Error Screenshot](screenshots/error.png)
