@@ -1,4 +1,31 @@
 ﻿<Properties StartupConfiguration="{67019FB5-07BA-4F12-A702-19C1DD9AFD9D}|http">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Sales FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Sales PreferredExecutionTarget="/Applications/Opera.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/ProducerSales.cs">
+    <Files>
+      <File FileName="Pages/FetchData.razor" Line="1" Column="21" />
+      <File FileName="Data/WeatherForecast.cs" Line="13" Column="1" />
+      <File FileName="Data/WeatherForecastService.cs" Line="1" Column="1" />
+      <File FileName="Data/ProducerSales.cs" Line="32" Column="19" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Sales">
+            <Node name="Sales">
+              <Node name="Data" expanded="True">
+                <Node name="ProducerSales.cs" selected="True" />
+              </Node>
+              <Node name="Pages" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
 </Properties>
