@@ -6,6 +6,7 @@
 /Users/sharazkhan/Projects/SalesRepo/Sales/bin/Debug/net7.0/Sales.runtimeconfig.json
 /Users/sharazkhan/Projects/SalesRepo/Sales/bin/Debug/net7.0/Sales.dll
 /Users/sharazkhan/Projects/SalesRepo/Sales/bin/Debug/net7.0/Sales.pdb
+/Users/sharazkhan/Projects/SalesRepo/Sales/bin/Debug/net7.0/CsvHelper.dll
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/Sales.csproj.AssemblyReference.cache
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/Sales.GeneratedMSBuildEditorConfig.editorconfig
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/Sales.AssemblyInfoInputs.cache
@@ -25,6 +26,7 @@
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/scopedcss/Shared/NavMenu.razor.rz.scp.css
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/scopedcss/bundle/Sales.styles.css
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/scopedcss/projectbundle/Sales.bundle.scp.css
+/Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/Sales.csproj.CopyComplete
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/Sales.dll
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/refint/Sales.dll
 /Users/sharazkhan/Projects/SalesRepo/Sales/obj/Debug/net7.0/Sales.pdb

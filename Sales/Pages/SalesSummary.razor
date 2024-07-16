@@ -1,36 +1,40 @@
-﻿@page "/fetchdata"
+﻿@page "/sales-summary"
 @using Sales.Data
-@inject WeatherForecastService ForecastService
+@inject ProductsService ProductService
 
-<PageTitle>Weather forecast</PageTitle>
+<h3>Sales Summary</h3>
 
-<h1>Weather forecast</h1>
-
-<p>This component demonstrates fetching data from a service.</p>
-
-@if (forecasts == null)
+@if (products == null)
 {
-    <p><em>Loading...</em></p>
+    <p>Loading...</p>
 }
 else
 {
     <table class="table">
         <thead>
             <tr>
+                <th>Segment</th>
+                <th>Country</th>
+                <th>Product</th>
+                <th>Discount Band</th>
+                <th>Units Sold</th>
+                <th>Manufacturing Price</th>
+                <th>Sale Price</th>
                 <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var sale in products)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@sale.Segment</td>
+                    <td>@sale.Country</td>
+                    <td>@sale.Product</td>
+                    <td>@sale.DiscountBand</td>
+                    <td>@sale.UnitsSold</td>
+                    <td>@sale.ManufacturingPrice</td>
+                    <td>@sale.SalePrice</td>
+                    <td>@sale.Date.ToShortDateString()</td>
                 </tr>
             }
         </tbody>
@@ -38,11 +42,10 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
+    private List<Products> products;
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        forecasts = await ForecastService.GetForecastAsync(DateOnly.FromDateTime(DateTime.Now));
+        products = ProductService.GetProducts();
     }
 }
-

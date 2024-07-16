@@ -6,12 +6,21 @@
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Data/ProducerSales.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/ProductsService.cs">
     <Files>
-      <File FileName="Pages/FetchData.razor" Line="1" Column="21" />
+      <File FileName="Pages/FetchData.razor" Line="2" Column="18" />
       <File FileName="Data/WeatherForecast.cs" Line="13" Column="1" />
       <File FileName="Data/WeatherForecastService.cs" Line="1" Column="1" />
-      <File FileName="Data/ProducerSales.cs" Line="32" Column="19" />
+      <File FileName="Data/ProducerSales.cs" Line="5" Column="22" />
+      <File FileName="Pages/SalesSummary.razor" Line="3" Column="24" />
+      <File FileName="Data/ProductsService.cs" Line="23" Column="1" />
+      <File FileName="Pages/Index.razor" Line="1" Column="1" />
+      <File FileName="Shared/NavMenu.razor" Line="29" Column="87" />
+      <File FileName="Shared/SurveyPrompt.razor" Line="1" Column="1" />
+      <File FileName="Shared/MainLayout.razor" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="1" Column="1" />
+      <File FileName="App.razor" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="13" Column="27" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -19,9 +28,10 @@
           <Node name="Sales">
             <Node name="Sales">
               <Node name="Data" expanded="True">
-                <Node name="ProducerSales.cs" selected="True" />
+                <Node name="ProductsService.cs" selected="True" />
               </Node>
               <Node name="Pages" expanded="True" />
+              <Node name="Shared" expanded="True" />
             </Node>
           </Node>
         </State>

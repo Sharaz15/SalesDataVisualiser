@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "dV83fAq0jn5uqPtNQgkkYZDlgQU2w5O0aYML6FhrISFfJYmafH5yAFczEryc545oa8MErDtOLNREPZH5RoFFvQ==",
+  "dgSpecHash": "maUzVPbisVkQ0mBXhhqmVLGukFslDACv+Xs2l+FlJE+uKuTV7IJHbitiykxjHCbzcFLuxtudc8SsxExI3S6Vzw==",
   "success": true,
   "projectFilePath": "/Users/sharazkhan/Projects/SalesRepo/Sales/Sales.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/sharazkhan/.nuget/packages/csvhelper/33.0.1/csvhelper.33.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
