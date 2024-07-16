@@ -10,7 +10,6 @@ CsvHelper is utilized to parse the CSV file containing sales data. The following
 ## Mappers
 
 - **Custom ClassMap:** A custom `ClassMap` is created to map the CSV columns to the `Product` model properties. This ensures each column in the CSV is correctly assigned to its corresponding property in the model.
-- **Trimming Headers:** The headers are trimmed to remove any leading or trailing whitespace. This is crucial to avoid errors during mapping if the CSV headers have unintended spaces.
 
 ## Converters
 
@@ -35,7 +34,8 @@ Serilog is used for logging events and errors to a file. The following configura
 
 ### Success
 
-![Success Screenshot](screenshots/success.png)
+![Success Screenshot](screenshots/success.png)![Uploading Screenshot 2024-07-16 at 22.16.20.png…]()
+
 
 ### Error
 
