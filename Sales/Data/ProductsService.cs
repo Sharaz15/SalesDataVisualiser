@@ -7,6 +7,13 @@ namespace Sales.Data;
 
 public class ProductsService
 {
+    private readonly ILogger<ProductsService> _logger;
+
+    public ProductsService(ILogger<ProductsService> logger)
+    {
+        _logger = logger;
+    }
+
     public List<Products> GetProducts()
     {
         try
@@ -22,7 +29,8 @@ public class ProductsService
         }
         catch (Exception ex)
         {
-            // Log the exception or handle it as necessary
+            // Log the exception and handle it as necessary
+            _logger.LogError(ex, "Error loading products from CSV");
             throw new Exception("Error loading products from CSV please see log file", ex);
         }
     }

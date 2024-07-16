@@ -1,6 +1,7 @@
 ﻿@page "/sales-summary"
 @using Sales.Data
 @inject ProductsService ProductService
+@inject ILogger<SalesSummary> Logger
 
 <PageTitle>Sales Summary</PageTitle>
 
@@ -60,6 +61,7 @@ else
         }
         catch (Exception ex)
         {
+            Logger.LogError(ex, errorMessage);
             errorMessage = ex.Message;
         }
     }
